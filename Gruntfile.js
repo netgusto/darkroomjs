@@ -52,12 +52,22 @@ module.exports = function(grunt) {
         files: {
           'build/js/darkroom.min.js': [
             'build/lib/js/darkroom.js',
-            'build/lib/js/plugins/darkroom.history.js',
-            'build/lib/js/plugins/darkroom.rotate.js',
-            'build/lib/js/plugins/darkroom.crop.js',
-            'build/lib/js/plugins/darkroom.save.js',
-            'build/lib/js/**/*.js'
-          ]
+          ],
+          'build/js/darkroom.plugin.save.min.js': [
+            'build/lib/js/plugins/darkroom.save.js'
+          ],
+
+          'build/js/darkroom.plugin.history.min.js': [
+            'build/lib/js/plugins/darkroom.history.js'
+          ],
+
+          'build/js/darkroom.plugin.rotate.min.js': [
+            'build/lib/js/plugins/darkroom.rotate.js'
+          ],
+
+          'build/js/darkroom.plugin.crop.min.js': [
+            'build/lib/js/plugins/darkroom.crop.js'
+          ],
         }
       }
     },
@@ -66,7 +76,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           style: 'compressed',
-          sourcemap: true
+          sourcemap: false
         },
         files: {
           'build/css/darkroom.min.css': 'build/lib/css/darkroom.scss'
